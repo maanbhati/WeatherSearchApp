@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="margin_x_small">5dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_x_large">32dp</dimen>
+    <dimen name="margin_xx_large">64dp</dimen>
+
+    <!-- List style -->
+    <dimen name="card_elevation">@dimen/margin_x_small</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="small_padding">4dp</dimen>
+    <dimen name="normal_padding">8dp</dimen>
+    <dimen name="image_size_small">48dp</dimen>
+    <dimen name="image_size_medium">920dp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+</resources>

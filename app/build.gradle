@@ -1,0 +1,119 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'jacoco'
+}
+
+android {
+    compileSdk rootProject.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.todo.app"
+        minSdk rootProject.minSdkVersion
+        targetSdk rootProject.targetSdkVersion
+        versionCode rootProject.appVersionCode
+        versionName rootProject.appVersionName
+
+        testInstrumentationRunner "com.todo.app.CustomTestRunner"
+        // testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // Jacoco config
+    testOptions {
+        unitTests.all {
+            jacoco {
+                includeNoLocationClasses = false
+            }
+        }
+        unitTests.returnDefaultValues = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            testCoverageEnabled false
+        }
+        debug {
+            testCoverageEnabled true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = jvmTargetVersion
+    }
+    viewBinding {
+        enabled true
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    //Network module dependency
+    implementation project(path: ':networkmodule')
+    implementation "androidx.core:core-ktx:$coreKtxVersion"
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "com.google.android.material:material:$materialDesignVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    // Card view dependency
+    implementation "androidx.cardview:cardview:$cardViewVersion"
+
+    // View model dependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModelLifecycleVersion"
+
+    // Lifecycle Observer dependency
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+    // OkHttp3 dependency
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpIntercepterVersion"
+
+    // Retrofit dependency
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+
+    // Gson converter dependency
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    //Hilt dependency
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+
+    //Room dependency
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+    //Glide dependency
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // Navigation Components
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationComponentVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationComponentVersion"
+
+    // Testing dependency
+    testImplementation "junit:junit:$jUnitVersion"
+    testImplementation "androidx.arch.core:core-testing:$coreTestingVersion"
+    testImplementation "io.mockk:mockk:$mockKVersion"
+    testImplementation "org.mockito:mockito-core:$mockitiCoreVersion"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutineTestVersion"
+    androidTestImplementation "androidx.test.ext:junit:$extJUnitVersion"
+    androidTestImplementation "org.mockito:mockito-android:$mockitoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    androidTestImplementation "androidx.test:core-ktx:$testKtxVersion"
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentTestingVersion"
+    // Hilt Testing dependency
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hiltTestingVersion"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hiltTestingVersion"
+}

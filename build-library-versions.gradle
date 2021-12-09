@@ -1,0 +1,42 @@
+// Define all library versions here
+ext {
+    // Sdk versions
+    compileSdkVersion = 31
+    minSdkVersion = 24
+    targetSdkVersion = 31
+    appVersionCode = 1
+    appVersionName = "1.0"
+
+    // Jvm versions
+    jvmTargetVersion = '1.8'
+
+    // App dependencies versions
+    coreKtxVersion = '1.7.0'
+    appCompatVersion = '1.4.0'
+    constraintLayoutVersion = '2.1.2'
+    materialDesignVersion = '1.4.0'
+    cardViewVersion = '1.0.0'
+    viewModelLifecycleVersion = '2.4.0'
+    retrofitVersion = '2.9.0'
+    okHttpIntercepterVersion = '4.9.1'
+    gsonVersion = '2.8.7'
+    hiltVersion = '2.38.1'
+    roomVersion = '2.3.0'
+    glideVersion = '4.12.0'
+    navigationComponentVersion = '2.3.5'
+    jUnitVersion = '4.13.2'
+    extJUnitVersion = '1.1.3'
+    espressoVersion = '3.4.0'
+    lifecycle_version = '2.4.0'
+
+    // Testing dependency
+    hiltTestingVersion = '2.38.1'
+    mockitoVersion = '2.18.3'
+    testKtxVersion = '1.4.0'
+    fragmentTestingVersion = '1.4.0'
+    coreTestingVersion = '2.1.0'
+    mockKVersion = '1.12.0'
+    coroutineTestVersion = '1.5.1'
+    mockitiCoreVersion = '3.9.0'
+    jacocoVersion = '0.8.5'
+}

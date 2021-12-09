@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:hint="@string/search_hint"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/city_name"
+        style="@style/TextStyleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/lorem_ipsum" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/current_temperature"
+        style="@style/TextStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/lorem_ipsum" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/weather_icon"
+        style="@style/Weather.Image"
+        android:layout_width="@dimen/image_size_small"
+        android:layout_height="@dimen/image_size_small" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/current_weather"
+        style="@style/TextStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/lorem_ipsum" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/current_date"
+        style="@style/TextStyleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/lorem_ipsum" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_small"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent" />
+</androidx.appcompat.widget.LinearLayoutCompat>
+

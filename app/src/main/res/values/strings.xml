@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TodoMvvmApp</string>
+    <string name="search_hint">Search city weather</string>
+    <string name="lorem_ipsum">Lorem ipsum</string>
+    <string name="min_max_temperature"> H - %s\u2103, L - %s\u2103</string>
+    <string name="day_temperature">%s\u2103</string>
+</resources>
