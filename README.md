@@ -1,7 +1,7 @@
 # WeatherSearchApp
  ### A simple Weather Search app, performed the search by city name, using MVVM clean Architecture.
 The App is using the [The Weather Api] for searching weather by city name.<br/>
-Get Your [APP_ID] for running the WeatherSearchApp.
+Get Your [Api Key] for running the WeatherSearchApp.
 Replace Your Api key with <PLACE_API_KEY_HERE> inside Api.kt interface for running the WeatherSearchApp.
 
 ### Build With 🏗️
@@ -33,7 +33,7 @@ Replace Your Api key with <PLACE_API_KEY_HERE> inside Api.kt interface for runni
    [Coroutines]: <https://kotlinlang.org/docs/coroutines-overview.html>
    [MVVM (Model View View-Model)]: <https://developer.android.com/jetpack/guide#recommended-app-arch>
    [The Weather Api]: <https://openweathermap.org/>
-   [APP_ID]:  <https://openweathermap.org/current>
+   [Api Key]:  <https://openweathermap.org/current>
    [Room]: <https://developer.android.com/training/data-storage/room/>
    [Mockito]:  <https://site.mockito.org/?>
    [MockK]:  <https://mockk.io/>
